@@ -1,0 +1,6 @@
+{
+  "name": "Cruor Theme",
+  "description": "An immersive horror phone theme with dynamic blood-dripping physics, alien glitched text glyph app icons, and an interactive occult OS simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
