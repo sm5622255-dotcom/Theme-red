@@ -171,17 +171,13 @@ class BloodDripSimulation {
         }
 
         // 4. Update splash particles
-        val pIterator = particles.iterator()
-        while (pIterator.hasNext()) {
-            val p = pIterator.next()
+        particles.forEach { p ->
             p.x += p.vx
             p.y += p.vy
             p.vy += 0.15f // gravity acceleration
             p.life -= 0.015f
-            if (p.life <= 0f) {
-                particles.remove(p)
-            }
         }
+        particles.removeAll { it.life <= 0f }
 
         // 5. Update custom paint strokes (slow drip from stroke points)
         paintStrokes.forEach { stroke ->
